@@ -85,6 +85,35 @@ public class LinkedList {
 
      }
 
+     public void addAtIndex(){
+
+         System.out.println("Enter the index");
+         int index = scanner.nextInt();
+         System.out.println("Enter the value");
+         int value = scanner.nextInt();
+        if(first==null){
+            System.out.println("Index Not Available Creating New index 0..");
+            index = 0;
+            first.data = value;
+        }
+        else{
+            Node node = new Node();
+            node.data = value;
+            Node temp = first;
+            int count = 0;
+            while(count!=index-1){
+                temp = temp.next;
+                count++;
+            }
+            node.previous = temp;
+            node.next = temp.next;
+            temp.next = node;
+            node.next.previous = node;
+
+        }
+         System.out.println("Element added at index "+index);
+     }
+
      public void display(){
         if(first==null){
             System.out.println("Nothing to Display");

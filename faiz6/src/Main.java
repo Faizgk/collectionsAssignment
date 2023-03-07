@@ -11,7 +11,8 @@ public class Main {
             System.out.println("2 ---> add Rear");
             System.out.println("3 ---> Delete Front");
             System.out.println("4 ---> Delete Rear");
-            System.out.println("5 ---> Display");
+            System.out.println("5 ---> Add at index");
+            System.out.println("6 ---> Display");
             System.out.println("Press any other number to Exit");
 
 
@@ -26,7 +27,9 @@ public class Main {
                 break;
                 case 4: linkedList.deleteRear();
                 break;
-                case 5: linkedList.display();
+                case 5: linkedList.addAtIndex();
+                break;
+                case 6: linkedList.display();
                 break;
                 default:
                     System.out.println("Exiting...");
